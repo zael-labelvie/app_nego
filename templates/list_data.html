@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>Application Négociation</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="{{url_for('static', filename='scripts.js')}}"></script>
+        <script type="text/json" src="data.json"></script>
+
+     </head>
+
+
+    <nav class="navbar navbar-light justify-content-between" style="text-align: center; background-color: white;">
+      <img src="{{url_for('static', filename='labelvie_logo.jpg')}}" style="margin-left:43%" width="10%" height="10%">
+    </nav>
+
+    <br><br><br><br><br>
+     <body style="background-image: url({{ url_for('static', filename='ss.png') }}); background-size: cover; background-repeat: no-repeat">
+         <div class="container" style="background-color: #FFFAFA; border-radius:20px; padding:30px">
+
+		<table class="table">
+			<tr>
+				<th>Fournisseur</th>
+				<th>Catégorie</th>
+				<th>Partie</th>
+                <th>Sous-Partie</th>
+				<th>Commentaire</th>
+			</tr>
+
+			<!-- here is a for-loop to give us all the socks -->
+			{% for sock in socks %}
+			<tr>
+				<td>{{ sock.fournisseur }}</td>
+				<td>{{ sock.categorie }}</td>
+				<td>{{ sock.partie }}</td>
+				<td>{{ sock.sous_partie }}</td>
+                <td>{{ sock.commentaire }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+               <a href="{{ url_for('home') }}"><button class="btn btn-outline-success btn-lg" style="margin-left:34%; margin-bottom:2%">Ajouter une nouvelle data</button></a>
+         </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
+
+

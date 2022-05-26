@@ -1,0 +1,11 @@
+{
+  "Fournisseur_interne": {
+    "name_1": ["Links", "Images", "Tables", "Lists"],
+    "name_2": ["Borders", "Margins", "Backgrounds", "Float"],
+    "name_3": ["Variables", "Operators", "Functions", "Conditions"]
+  },
+  "Fournisseur_externe": {
+    "name_11": ["Variables", "Strings", "Arrays"],
+    "name_12": ["SELECT", "UPDATE", "DELETE"]
+  }
+};

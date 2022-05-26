@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>Application Négociation</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="{{url_for('static', filename='scripts.js')}}"></script>
+        <script type="text/json" src="data.json"></script>
+
+     </head>
+
+
+    <nav class="navbar navbar-light justify-content-between" style="text-align: center; background-color: white;">
+      <img src="{{url_for('static', filename='labelvie_logo.jpg')}}" style="margin-left:43%" width="10%" height="10%">
+    </nav>
+
+    <br><br><br><br><br>
+     <body style="background-image: url({{ url_for('static', filename='ss.png') }}); background-size: cover; background-repeat: no-repeat">
+         <div class="container" style="background-color: #FFFAFA; border-radius:20px; padding:30px">
+
+                 <a href="{{ url_for('list_data') }}"><button class="btn btn-outline-info btn-lg" style="margin-left:42%">Voir Data</button></a>
+
+                 <br>
+                 <form action="{{ url_for('add_data')}}" method="post">
+                     <fieldset>
+
+                         <div class="form-group">
+                    Fournisseur : <select name="fournisseur" id="fournisseur" class="form-control" required>
+                                <option value="" selected="selected" >Selectionner un fournisseur</option>
+                                <option>DANONE</option>
+                                <option>DAMANDIS</option>
+                                <option>BIG DISTRIBUTION</option>
+                                <option>BEL</option>
+                                <option>BOSH ELECTRO MANAGER S A</option>
+                                <option>BOURCHANIN</option>
+                                <option>CHALLENGE</option>
+                                <option>Canal Food</option>
+                                <option>COLGATE</option>
+                                <option>CONSERVES DOHA</option>
+                                <option>Conserves Meknes</option>
+                                <option>COPAG Groupe</option>
+                                <option>Groupe Copralim</option>
+                                <option>DISTY</option>
+                                <option>DRINKS</option>
+                                <option>ELECTRO PRO</option>
+                                <option>ELECTROLUX</option>
+                                <option>ELECTRONIA</option>
+                                <option>FOODS AND GOODS</option>
+                                <option>FOOD GROUP TRADING</option>
+                                <option>EMID</option>
+                                <option>Lesieur</option>
+                                <option>LG</option>
+                                <option>L'OREAL</option>
+                                <option>MADEC</option>
+                                <option>NESTLE</option>
+                                <option>MANAR</option>
+                                <option>Pernod Ricard</option>
+                                <option>Samsung</option>
+                                <option>PGDM</option>
+                                <option>SAVOLA</option>
+                                <option>BRASSERIES DU MAROC</option>
+                                <option>SCBG</option>
+                                <option>SOCIMAR</option>
+                                <option>WHIRLPOOL MAROC</option>
+                                <option>UNILEVER</option>
+                                <option>OMNITRADE</option>
+                                <option>ALEX TECHNOLOGIE</option>
+                                <option>BDF CONSO</option>
+                                <option>OULMES</option>
+                                <option>Groupe Koutoubia</option>
+                                <option>ABCDIS</option>
+                                <option>EBERTEC</option>
+                                <option>ATLANTIC</option>
+                                <option>EXCELO</option>
+                                <option>VARUN</option>
+                                <option>SOTHERMA</option>
+                                <option>FRIESLAND CAMPINA</option>
+                                <option>SOCIETE LAITIERE CHERGUI SA</option>
+                                <option>Dislog</option>
+                                <option>BANCHEREAU</option>
+                                <option>AJP Groupe</option>
+                                <option>CANDY HOOVER MAROC SARL</option>
+                                <option>EASYDIS</option>
+                                <option>PARTNERS & PARTNERS</option>
+                                <option>AL HAMD</option>
+                                <option>Maymouna Groupe</option>
+                                <option>SOMATHES</option>
+                                <option>SARL AFE DISTRIBUTION</option>
+                                <option>OBEGI</option>
+                                <option>OVO</option>
+                                <option>DALIA</option>
+                                <option>AL KARAMA</option>
+                                <option>BIMEX</option>
+                                <option>BELLA TAWZIAA</option>
+                                <option>ZOUBAIRI DISTRIBUTION</option>
+                                <option>COSUMAR</option>
+                                <option>JESSY DIFFUSION</option>
+                                <option>STOP DISTRIBUTION</option>
+                                <option>MIEL DU MAROC</option>
+                                <option>DARI COUSPATE SA</option>
+                                <option>K-DIS</option>
+                                <option>IWACO</option>
+                                <option>CAFES SAHARA</option>
+                                <option>ECP MAROC</option>
+                                <option>SANCELLA MAROC</option>
+                                <option>LA FERME ROUGE</option>
+                                <option>MAD SPIRIT</option>
+                                <option>SODIPOL</option>
+                                <option>LOGIFOOD</option>
+                                <option>WADIF</option>
+                                <option>GSM</option>
+                                <option>TENERIF</option>
+                                <option>DISTRA</option>
+                                <option>KING GENERATION</option>
+                                <option>MONA HOME HM</option>
+                                <option>MADICO</option>
+                                <option>NESS DISTRIBUTION</option>
+                                <option>LEADER FOOD</option>
+                                <option>VCR</option>
+                              </select>
+                          </div>
+
+                         <div class="form-group">
+                    Catégorie : <select name="categorie" id="categorie" class="form-control" required>
+                                <option value="" selected="selected" >Selectionner une catégorie</option>
+                              </select>
+                          </div>
+
+                         <div class="form-group">
+                    Partie : <select name="partie" id="partie" class="form-control" required>
+                                <option value="" selected="selected">Selectionner une partie</option>
+                            </select>
+                          </div>
+
+
+                         <div class="form-group">
+                    Sous partie : <select name="sous_partie" id="sous_partie" class="form-control">
+                                <option value="" selected="selected">Selectionner une sous partie</option>
+                            </select>
+                         </div>
+
+                         <div class="form-group">
+                            <label for="commentaire" >Commentaire</label>
+                                <textarea name="commentaire" class="form-control" id="commentaire" rows="3" required></textarea>
+                        </div>
+                         </fieldset>
+                     <button type="Submit" class="btn btn-outline-success btn-lg" style="margin-left:41%;">Enregistrer</button>
+                    </form>
+         </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
+
