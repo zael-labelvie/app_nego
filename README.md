@@ -10,5 +10,5 @@ Ensuite installer les packages utilisés par la commande
 En fin pour lancer l'application il suffit de taper la commande suivante :
    #### python app.py
   
- ## Rajouter des fournisseur - catégorie - partie - sous partie dans les listes déroulantes 
- Pour rajouter d'autre fournisseurs, catégories, parties, sous parties il suffit de se localiser dans le fichier static/scipts.js et modifier les valeurs du premier parametre -var subjectObject = {} et rajouter dedans les élements que vous voulez en respenctant l'ordre.
+ ## Rajouter des fournisseurs - catégories - parties - sous parties dans les listes déroulantes 
+ Pour rajouter d'autre fournisseurs, catégories, parties et sous parties il suffit de se localiser dans le fichier static/scipts.js et modifier les valeurs du premier parametre -var subjectObject = {} et rajouter dedans les élements que vous voulez en respenctant l'ordre.
