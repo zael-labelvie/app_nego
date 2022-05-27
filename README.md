@@ -5,7 +5,7 @@ Cette application développée pour l'équipe Nego pour faciliter l'insertion de
 
 ## Lancement de l'application
 Avant de commencer, il faut installer POSTGRESQL/PG ADMIN - IDE (Pycharm) - Python 3.10 
-Ensuite installer les packages utilisés par la commande
+Ensuite installer les packages utilisés par la commande :
    #### pip install requirements.txt
 En fin pour lancer l'application il suffit de taper la commande suivante :
    #### python app.py
