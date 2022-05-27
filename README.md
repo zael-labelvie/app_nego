@@ -1,6 +1,6 @@
 # App_nego - LABELVIE
 
-## Context de l'application
+## Contexte général
 Cette application développée pour l'équipe Nego pour faciliter l'insertion de données dans une base de données sécurisée au lieu d'utiliser EXCEL
 
 ## Lancement de l'application
