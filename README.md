@@ -1,7 +1,7 @@
 # App_nego - LABELVIE
 
 ## Context de l'application
-Cette application développée pour l'équipe Nego pour faciliter l'insertion de données dans une base de données plus sécurisée au lieu d'utiliser EXCEL
+Cette application développée pour l'équipe Nego pour faciliter l'insertion de données dans une base de données sécurisée au lieu d'utiliser EXCEL
 
 ## Lancement de l'application
 Avant de commencer, il faut installer POSTGRESQL/PG ADMIN - IDE (Pycharm) - Python 3.10 
